@@ -1,0 +1,84 @@
+/* universal selector */
+* {
+    color: blue;
+}
+
+/* type or element selector */
+div {
+    border-style: dashed;
+}
+
+/* class selector: class attribute of an html tag */
+
+.navbar {
+    background-color: coral;
+}
+
+/* id selector: id attribute of an html tag */
+
+#footer {
+    background-color: chartreuse;
+}
+
+/* grouping selectors together (can repeat separately later for things they don't have in common) */
+.read,
+.unread {
+    color: white;
+    background-color: black;
+}
+
+/* chaining and descendant */
+.subsection.header {
+    color: red;
+}
+
+.ancestor .contents {
+    text-align: justify;
+}
+
+/* PROPERTIES */
+
+/* ways to say color */
+p {
+    color: #1100ff;
+    color: rgb(100, 0, 127);
+    color: hsl(15, 82%, 56%); 
+    color: hsla(120, 60%, 70%, 0.3);
+}
+
+/* text */
+p .code{
+    /* Order by preference */
+    font-family: Courier, monospace;
+    font-size: 22px;
+    font-weight: 200; /* keyword 'bold' or value 1-1000, where 700 is bold */
+    text-align: left;
+}
+
+/* images */
+img {
+    height: auto;
+    width: 500px; /* note: specifying these allows page to leave correct size blank space when loading page */
+}
+
+/* notes about cascades
+
+more specific style takes precedence:
+1. ID selector
+2. Class selector
+3. Type selector
+
+If tie occurs at same specificity level, whichever has larger number of selectors will take precedence. for example:
+
+.subsection {}
+loses to
+.main .list{}
+
+*/
+
+/* Inheritance 
+Typography like color and font are typically inherited, but most other properties aren't.
+Inheritance is lower precedence than selector type.
+
+The final tie breaker after all this, is rule order: last declaration wins
+*/
