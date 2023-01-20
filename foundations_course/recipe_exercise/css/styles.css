@@ -1,0 +1,21 @@
+.recipeName {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.mainImage {
+    height: 400px;
+    width: auto;
+}
+
+.descriptionText {
+    font-style: italic;
+    background-color:rgb(247, 239, 228);
+}
+
+.ingredientsList {
+    list-style-type: square;
+}
+
+.stepsList {
+    list-style-type: lower-roman;
+}
